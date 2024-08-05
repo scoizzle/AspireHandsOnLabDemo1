@@ -4,7 +4,12 @@ builder.AddServiceDefaults();
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () =>
+{
+    if (Random.Shared.Next(4) == 1) throw new Exception("Random exception");
+
+    return "Hello World!";
+});
 
 app.MapDefaultEndpoints();
 app.Run();
