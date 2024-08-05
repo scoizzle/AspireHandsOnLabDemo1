@@ -21,7 +21,7 @@ app.MapGet("/", async (AppDbContext db) =>
 
 app.MapGet("/backend", (HttpClient client) =>
 {
-    return client.GetStringAsync("http://backend");
+    return client.GetStringAsync("http://flakey-web-app");
 });
 
 app.MapDefaultEndpoints();
