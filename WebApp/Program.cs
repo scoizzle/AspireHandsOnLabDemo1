@@ -1,11 +1,35 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+builder.AddNpgsqlDbContext<AppDbContext>("db");
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", async (AppDbContext db) =>
+{
+    await db.Database.EnsureCreatedAsync();
+
+    var product = new Product();
+
+    await db.Products.AddAsync(product);
+    await db.SaveChangesAsync();
+
+    return await db.Products.ToListAsync();
+});
 
 app.MapDefaultEndpoints();
 
 app.Run();
+
+
+class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+{
+    public DbSet<Product> Products => Set<Product>();
+}
+
+public class Product
+{
+    public Guid Id { get; set; } = Guid.NewGuid();
+}

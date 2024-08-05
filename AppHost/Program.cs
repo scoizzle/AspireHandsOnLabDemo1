@@ -2,6 +2,9 @@ using Projects;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<WebApp>("web-app");
+var db = builder.AddPostgres("db");
+
+builder.AddProject<WebApp>("web-app")
+    .WithReference(db);
 
 builder.Build().Run();
