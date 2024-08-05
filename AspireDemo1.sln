@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceDefaults", "ServiceDefaults\ServiceDefaults.csproj", "{D5ACA292-8419-46EE-BA29-864E06ABF0F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlakeyWebApp", "FlakeyWebApp\FlakeyWebApp.csproj", "{F436801F-DC98-4020-8F5A-AE17C1CA6EF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{D5ACA292-8419-46EE-BA29-864E06ABF0F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5ACA292-8419-46EE-BA29-864E06ABF0F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5ACA292-8419-46EE-BA29-864E06ABF0F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F436801F-DC98-4020-8F5A-AE17C1CA6EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F436801F-DC98-4020-8F5A-AE17C1CA6EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F436801F-DC98-4020-8F5A-AE17C1CA6EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F436801F-DC98-4020-8F5A-AE17C1CA6EF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

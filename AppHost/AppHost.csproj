@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebApp\WebApp.csproj" />
+    <ProjectReference Include="..\FlakeyWebApp\FlakeyWebApp.csproj" />
   </ItemGroup>
 
 </Project>

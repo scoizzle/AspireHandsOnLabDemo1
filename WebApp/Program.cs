@@ -19,6 +19,11 @@ app.MapGet("/", async (AppDbContext db) =>
     return await db.Products.ToListAsync();
 });
 
+app.MapGet("/backend", (HttpClient client) =>
+{
+    return client.GetStringAsync("http://backend");
+});
+
 app.MapDefaultEndpoints();
 
 app.Run();
