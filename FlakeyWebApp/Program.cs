@@ -6,7 +6,7 @@ var app = builder.Build();
 
 app.MapGet("/", () =>
 {
-    if (Random.Shared.Next(4) == 1) throw new Exception("Random exception");
+    if (Random.Shared.Next(maxValue: 4) == 1) throw new Exception("Random exception");
 
     return "Hello World!";
 });
